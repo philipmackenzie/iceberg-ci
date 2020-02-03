@@ -1,0 +1,33 @@
+{
+  "win":{
+    "solution": "Builds/VisualStudio2017/example.sln",
+    "installerName": "ExampleSetup.exe",
+    "clean": true,
+    "configuration": "Release"
+  },
+  "mac" : {
+      "solution": "Builds/MacOSX/Example.xcodeproj/project.xcworkspace",
+      "installerName": "ExampleSetup",
+      "clean": true,
+      "configuration" : "Release",
+      "macInstallerDir" : "installers/macOS-x64",
+      "schemes" :
+      [
+          "Example - Standalone Plugin"
+      ],
+      "contents" :
+      {
+          "Example - Standalone Plugin":
+          {
+              "appName" : "Example.app",
+              "folders" :
+              [
+                  {
+                      "srcDir": "Builds/MacOSX/build/Release/Example.app",
+                      "destDir": "Applications/Example.app"
+                  }
+              ]
+          }
+      }
+  }
+}

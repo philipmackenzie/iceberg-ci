@@ -1,0 +1,36 @@
+{
+  "buildServers": {
+    "teamcity": {
+      "msbuildExe" : "C:\\Program Files (x86)\\Microsoft Visual Studio\\\\2017\\Community\\MSBuild\\15.0\\Bin\\msbuild.exe",
+      "innoSetupExe" : "c:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe",
+	  "stampBuildWithVersion" : true,
+	  "copyArtifacts" : true,
+	  "copyArtifactsDir" : "F:\\\\Cloud\\Dropbox\\Builds\\Synth"
+    },
+    "azure": {
+      "msbuildExe" : "C:\\Program Files (x86)\\Microsoft Visual Studio\\\\2017\\Enterprise\\MSBuild\\\\15.0\\Bin\\msbuild.exe",
+      "innoSetupExe" : "c:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe",
+      "xcodeBuildExe" : "/usr/bin/xcodebuild",
+	  "stampBuildWithVersion" : true,
+	  "copyArtifacts" : false
+    },
+    "desktop": {
+      "msbuildExe" : "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\MSBuild\\15.0\\Bin\\msbuild.exe",
+      "innoSetupExe" : "c:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe",
+	  "stampBuildWithVersion" : false,
+	  "copyArtifacts" : false,
+	  "copyArtifactsDir" : ""
+    },
+    "laptop": {
+      "msbuildExe" : "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\MSBuild\\15.0\\Bin\\msbuild.exe",
+      "innoSetupExe" : "c:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe",
+      "xcodeBuildExe" : "/usr/bin/xcodebuild",
+	  "stampBuildWithVersion" : false,
+	  "copyArtifacts" : false,
+	  "copyArtifactsDir" : ""
+    }
+  },
+
+  "productsDir" : "products",
+  "timestampFormat" : "%Y%m%d-%H%M%S"
+}

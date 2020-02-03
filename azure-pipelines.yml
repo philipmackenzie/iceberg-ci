@@ -1,0 +1,39 @@
+stages:
+- stage: Build
+  jobs:
+  - job: Windows
+    steps:
+    - checkout: self
+      submodules: true
+    - script: C:\Python27amd64\python.exe build\build.py azure . $(Build.BuildId) example
+    - task: CopyFiles@2
+      inputs:
+        Contents: |
+          products\example\example.log
+          products\example\ExampleSetup.exe
+        TargetFolder: $(Build.ArtifactStagingDirectory)
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: $(Build.ArtifactStagingDirectory)
+        artifactName: Example
+  - job: MacOS
+    pool:
+      vmImage: 'macOS-10.14'
+    steps:
+    - checkout: self
+      submodules: true
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '2.7.17'
+        addToPath: true 
+    - script: python build/build.py azure . $(Build.BuildId) example
+    - task: CopyFiles@2
+      inputs:
+        Contents: |
+          products/example/*.pkg
+        TargetFolder: $(Build.ArtifactStagingDirectory)
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: $(Build.ArtifactStagingDirectory)
+        artifactName: Example
+
