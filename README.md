@@ -21,4 +21,6 @@ products: space separated list of products to build
 e.g.
 python build\build.py desktop . 1 example
 
+### Licence ###
 
+JUCE is owned by ROLI is included as a submodule https://juce.com/juce-5-license
