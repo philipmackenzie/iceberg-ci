@@ -5,7 +5,7 @@ stages:
     steps:
     - checkout: self
       submodules: true
-    - script: python build\build.py azure . $(Build.BuildId) example
+    - script: python build/build.py azure . $(Build.BuildId) example
     - task: CopyFiles@2
       inputs:
         Contents: |
