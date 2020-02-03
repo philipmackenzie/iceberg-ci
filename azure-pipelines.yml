@@ -3,9 +3,7 @@ stages:
   jobs:
   - job: Windows
     pool:
-      name: Default
-      demands:
-      - agent.os -equals Windows_NT
+      vmImage: 'vs2017-win2016'
     steps:
     - checkout: self
       submodules: true
