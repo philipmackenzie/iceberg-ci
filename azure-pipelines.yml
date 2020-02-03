@@ -2,6 +2,10 @@ stages:
 - stage: Build
   jobs:
   - job: Windows
+    pool:
+      name: Default
+      demands:
+      - agent.os -equals Windows_NT
     steps:
     - checkout: self
       submodules: true
