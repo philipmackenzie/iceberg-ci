@@ -1,6 +1,8 @@
-## A simple CI system for cross platform builds of JUCE apps and audio plugins. ##
+## A simple CI system for cross platform builds ##
 
-Developed at Iceberg Audio for automated CI builds that build on Azure, teamcity or desktop. This builds a collection of products including their installers.
+Developed at Iceberg Audio for automated CI builds for audio products using the JUCE library.
+
+Commit to git and get cross-platform installers build in parallel.
 
 ### Requirements ###
 * Python 3 (e.g. Anaconda). Developed using python 3.7.1
