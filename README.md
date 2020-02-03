@@ -2,7 +2,7 @@
 
 Developed at Iceberg Audio for automated CI builds for audio products using the JUCE library.
 
-Commit to git and get cross-platform installers build in parallel.
+Commit to git and get cross-platform installers built in parallel.
 
 ### Requirements ###
 * Python 3 (e.g. Anaconda). Developed using python 3.7.1
@@ -15,10 +15,10 @@ Or build on the command line (Windows example)
 * cd iceberg-ci
 * python build\build.py <build machine> <root directory> <build number> <products>
 
-build machine: one of the configurations in builds\iceberg-ci.json. Use this to specify your build tools.
-root directory: root folder of the repo
-build number: the build number (can auto increment in Azure)
-products: space separated list of products to build
+* build machine: one of the configurations in builds\iceberg-ci.json. Use this to specify your build tools.
+* root directory: root folder of the repo
+* build number: the build number (can auto increment in Azure)
+* products: space separated list of products to build
 
 e.g.
 python build\build.py desktop . 1 example
